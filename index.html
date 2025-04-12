@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Central de Ajuda do Aterro Sanitário de Goiânia</h1>
+    </header>
+
+    <div class="container">
+        <section id="mainContent">
+            <p>Bem-vindo à Central de Ajuda! Escolha uma das opções abaixo para obter assistência:</p>
+            <div class="buttons-container">
+                <button onclick="startProcess('cadastro')"><i class="fas fa-user-plus"></i> Como se Cadastrar no SINIR</button>
+                <button onclick="startProcess('mtr')"><i class="fas fa-file-alt"></i> Como Gerar MTR</button>
+                <button onclick="showSlide('faq')"><i class="fas fa-question-circle"></i> Dúvidas Frequentes (FAQ)</button>
+            </div>
+        </section>
+
+        <section id="cadastro" class="slide">
+            <h2>Cadastro no SINIR</h2>
+            <div id="responseCadastro">
+                </div>
+            <button onclick="goBack()" class="back-to-menu"><i class="fas fa-arrow-left"></i> Voltar</button>
+        </section>
+
+        <section id="mtr" class="slide">
+            <h2>Geração de MTR</h2>
+            <div id="responseMtr">
+                </div>
+            <button onclick="goBack()" class="back-to-menu"><i class="fas fa-arrow-left"></i> Voltar</button>
+        </section>
+
+        <section id="faq" class="slide">
+            <h2>Dúvidas Frequentes (FAQ)</h2>
+            <div class="faq-search">
+                <input type="text" id="userQuestion" placeholder="Digite sua pergunta...">
+                <button onclick="handleUserQuestion()"><i class="fas fa-search"></i> Buscar</button>
+            </div>
+            <div id="questionResponse">
+                </div>
+            <button onclick="goBack()" class="back-to-menu"><i class="fas fa-arrow-left"></i> Voltar</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Aterro Sanitário de Goiânia</p>
+    </footer>
+
+    <script src="procedimentosDB.js"></script>
+    <script src="perguntasDB.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
